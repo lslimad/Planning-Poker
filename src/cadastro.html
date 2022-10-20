@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="cadastro.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="img/logo-branco.png">
+    </head>
+
+    <body>
+		<header>
+			<div>
+				<h1><img src="img/logo.png"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Início</a></li>
+						<li><a href="cadastro.html">Cadastro</a></li>
+						<li><a href="votacao.html">Votação</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+        <main>
+                        <h2>Preencha os dados para dar início a partida.</h2>
+            <section>
+                <form>
+                    <div>
+                        <label for="nomedojogo">Nome do jogo</label>
+				        <input type="text" id="nomedojogo">
+                        <label class="checkbox"><input type="checkbox" checked> Sou o dono</label>
+                    </div>
+
+                    <div>
+				        <label for="historia">História de Usuário</label>
+				        <input type="text" id="historia" placeholder="Descreva a história">
+                    </div>
+
+                    <div>
+					    <legend>Sistema de Votação</legend>
+					        <select>
+						        <option>Fibonnacci (0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...)</option>
+					        </select>
+                    </div>
+
+                    <div>
+                        <a href="votacao.html"><input type="submit" value="Criar jogo" class="criar"></a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
