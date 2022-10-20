@@ -1,2 +1,2 @@
 # Planning-Poker
-Formando Devs
+Formando Devs - Projeto: aplicação de um Planning Poker.
