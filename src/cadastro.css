@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,43 +9,38 @@ body {
 }
 
 header {
-	width: 100%;
+    width: 100%;
     background: #ffffff;
     padding: 20px 90px;
 }
 
-nav {
-    position: absolute;
-    top: 55px;
-    right: 100px;
-}
-
-nav li {
-    display: inline;
-    margin: 0 0 0 15px;
-}
-
-nav a {
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #00678A;
-    text-decoration: none;
-}
-
 main {
-    background-color: #ffffff;
+    background-color: #CBD7E1;
     padding: 20px 90px;
 }
 
+.campo {
+    display: block;
+    margin: auto;
+    padding: 20px 0 20px 0;
+    background-color: #ffffff;
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 h2 {
-    text-align:center;
-    font-size: 18px;
+    color: #00678A;
+    text-align: center;
+    font-size: 24px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 section {
@@ -55,7 +50,7 @@ section {
 }
 
 form {
-	margin: 40px 0;
+    margin: 40px 0;
 }
 
 form div {
@@ -64,20 +59,11 @@ form div {
     margin-bottom: 15px;
 }
 
-form label {
-    margin-bottom: 5px;
-}
-
 form input text {
     outline: unset;
     padding: 10px;
     width: 600px;
-    border: 1px solid;
     border-radius: 3px;
-}
-
-.checkbox {
-padding: auto;
 }
 
 legend {
@@ -88,20 +74,26 @@ select {
     width: 600px;
 }
 
+.botao {
+    align-items: center;
+}
+
 .criar {
-	width:600px;
+    width: 250px;
     margin-top: 30px;
-	padding: 20px 0;
-	background: #00678A;
-	color: white;
-	font-weight: bold;
-	font-size: 18px;
-	border: none;
-	border-radius: 5px;
-	transition: 1s all;
-	cursor: pointer;
+    padding: 10px 0;
+    background: #00678A;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
 }
 
 .criar:hover {
-	background: #189cc9;
+    background: #189cc9;
 }

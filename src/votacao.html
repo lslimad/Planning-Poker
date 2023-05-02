@@ -1,97 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Votação</title>
-        <link rel="stylesheet" href="votacao.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="icon" href="img/logo-branco.png">
-    </head>
-    
-    <body>
-        <header>
-			<div>
-				<h1><img src="img/logo.png"></h1>
 
-				<nav>
-					<ul>
-						<li><a href="index.html">Início</a></li>
-						<li><a href="cadastro.html">Cadastro</a></li>
-						<li><a href="votacao.html">Votação</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+<head>
+    <meta charset="UTF-8">
+    <title>Votação</title>
+    <link rel="stylesheet" href="votacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo-branco.svg">
+</head>
 
-        <main>
-                <h2>Nome do jogo</h2>
+<body>
+    <header>
+        <div>
+            <h1><img src="img/logo.png"></h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="sala">
+                <h2>Nome da sala</h2>
+            </div>
+            <div class="descricao">
+                <h3>Descrição da História</h3>
+            </div>
+        </section>
+        <div class="esquerdo">
             <section class="container">
-                <div class="cartas">
+                <div onclick="votar(0,this,'clicked')" class="cartas">
                     <p>0</p>
                 </div>
 
-                <div class="cartas">
+                <div onclick="votar(1,this,'clicked')" class="cartas">
                     <p>1</p>
                 </div>
 
-                <div class="cartas">
+                <div onclick="votar(2,this,'clicked')" class="cartas">
                     <p>2</p>
                 </div>
-                
-                <div class="cartas">
+
+                <div onclick="votar(3,this,'clicked')" class="cartas">
                     <p>3</p>
                 </div>
 
-                <div class="cartas">
+                <div onclick="votar(5,this,'clicked')" class="cartas">
                     <p>5</p>
                 </div>
 
-                <div class="cartas">
+                <div onclick="votar(8,this,'clicked')" class="cartas">
                     <p>8</p>
                 </div>
 
-                <div class="cartas">
+                <div onclick="votar(13,this,'clicked')" class="cartas">
                     <p>13</p>
                 </div>
 
-                <div class="cartas">
+                <div onclick="votar(21,this,'clicked')" class="cartas">
                     <p>21</p>
                 </div>
 
-                <div class="cartas">
+                <div onclick="votar(34,this,'clicked')" class="cartas">
                     <p>34</p>
                 </div>
 
-                <div class="cartas">
-                    <p>55</p>
-                </div>
-
-                <div class="cartas">
-                    <p>89</p>
-                </div>
-
-                <div class="cartas">
+                <div onclick="votar(20,this,'clicked')" class="cartas">
                     <p>?</p>
                 </div>
             </section>
 
-            <section class="votos">
-                <div class="usuarios">
-                    <h3>Players</h2>
-                    <p>Luísa Andrade: <strong> 8</strong></p>
-                    <p>Tamara Mendes: <strong> 5</strong></p>
+            <section class="painel-historico">
+                <div class="historias">
+                    <h4>Histórias Ativas</h4>
+                    <h5>Histórias Concluídas</h5>
+                    <h6>Todas as Histórias</h6>
+                    <img src="img/add.png" class="adicionar">
                 </div>
-
-                <div>
-                   <a href="media.html"><input type="submit" value="Finalizar votação" class="finalizar"></a>
+                <div class="historia-tres">
+                    <p>História 03</p>
                 </div>
-
-                <div class="processamento">
-                    <p class="aguarde">Aguarde! A votação está sendo processada.</p>
+                <div class="historia-dois">
+                    <p>História 02</p>
+                </div>
+                <div class="historia-um">
+                    <p>História 01</p>
                 </div>
             </section>
-        </main>
-    </body>
+        </div>
+
+        <div class="direito">
+            <section class="painel">
+
+                <div class="instrucao">
+                    <p class="texto-painel">Você deve dar inicio a partida</p>
+                </div>
+
+                <div class="barra">
+                    <p><strong>Jogadores:</strong></p>
+
+                    <div class="participantes">
+                        <img src="img/avatar.png">
+                        <p>Luísa Andrade</p>
+                    </div>
+
+                    <div class="participantes">
+                        <img src="img/avatar.png">
+                        <p>Fernanda Januzzi</p>
+                    </div>
+
+                    <div class="participantes">
+                        <img src="img/avatar.png">
+                        <p>Ana Piassi</p>
+                    </div>
+                </div>
+
+                <div class="tempo">
+                    <p>Tempo restante:</p>
+                    <div class="contagem"></div>
+                </div>
+
+                <div class="iniciar">
+                    <button id="botao-iniciar">Iniciar votação</button>
+                </div>
+
+                <div class="espaço">
+                </div>
+
+                <div class="convite">
+                    <p class="texto-painel">Convide um colega de equipe</p>
+                    <button id="botaoconvite" class="botao-convite" onclick="copiarLinkConvite()">Copiar convite</button>
+                </div>
+
+            </section>
+        </div>
+
+        <!--Pop-up-->
+        <dialog id="pop-up">
+                <div class="resultado">
+                    <p class="resultado-media">Valor média</p>
+                </div>
+                <a onclick="fecharPopup();clicarCarta()" class="nova-historia" href="cadastro.html">Nova história</a>
+        </dialog>
+
+    </main>
+    <script src="votacao.js"></script>
+    <script src="dados.js"></script>
+</body>
+
 </html>

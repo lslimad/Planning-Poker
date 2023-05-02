@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cadastro</title>
-        <link rel="stylesheet" href="cadastro.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="icon" href="img/logo-branco.png">
-    </head>
 
-    <body>
-		<header>
-			<div>
-				<h1><img src="img/logo.png"></h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo-branco.svg">
+</head>
 
-				<nav>
-					<ul>
-						<li><a href="index.html">Início</a></li>
-						<li><a href="cadastro.html">Cadastro</a></li>
-						<li><a href="votacao.html">Votação</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-        <main>
-                        <h2>Preencha os dados para dar início a partida.</h2>
+<body>
+    <header>
+        <div>
+            <h1><img src="img/logo.svg"></h1>
+        </div>
+    </header>
+    <main>
+        <section class="campo">
+            <h2>Falta pouco!</h2>
+            <h3>Preencha os dados para criar uma nova sala.</h3>
             <section>
                 <form>
                     <div>
-                        <label for="nomedojogo">Nome do jogo</label>
-				        <input type="text" id="nomedojogo">
-                        <label class="checkbox"><input type="checkbox" checked> Sou o dono</label>
+                        <input type="text" id="nomedojogador" placeholder="Nome do jogador">
                     </div>
 
                     <div>
-				        <label for="historia">História de Usuário</label>
-				        <input type="text" id="historia" placeholder="Descreva a história">
+                        <input type="text" id="nomedasala" placeholder="Nome da sala">
                     </div>
 
                     <div>
-					    <legend>Sistema de Votação</legend>
-					        <select>
-						        <option>Fibonnacci (0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...)</option>
-					        </select>
+                        <input type="text" id="historia" placeholder="Descreva a história">
                     </div>
 
                     <div>
-                        <a href="votacao.html"><input type="submit" value="Criar jogo" class="criar"></a>
+                        <select>
+                            <option>Seletione um sistema de votação...</option>
+                            <option>Fibonnacci (0, 1, 2, 3, 5, 8, 13, 21, 34, ?)</option>
+                        </select>
+                    </div>
+
+                    <div class="botao">
+                        <a class="criar" onClick="criarSala(document.getElementById('nomedojogador'))" href="votacao.html">Criar sala</a>
                     </div>
                 </form>
             </section>
-        </main>
-    </body>
+        </section>
+    </main>
+    <script src="cadastro.js"></script>
+    <script src="dados.js"></script>
+</body>
 </html>
